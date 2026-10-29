@@ -1,0 +1,14 @@
+{
+  "name": "sdd-kit",
+  "description": "Lightweight spec-driven development skills for Claude Code.",
+  "owner": {
+    "name": "William Avila"
+  },
+  "plugins": [
+    {
+      "name": "sdd",
+      "source": "./",
+      "description": "Lightweight spec-driven development: minimal spec, TDD phases, and developer approval on every phase (pair programming)."
+    }
+  ]
+}

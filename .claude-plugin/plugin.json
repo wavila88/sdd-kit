@@ -1,0 +1,10 @@
+{
+  "name": "sdd",
+  "version": "0.1.0",
+  "description": "Lightweight spec-driven development: minimal spec, TDD phases, and developer approval on every phase (pair programming).",
+  "author": {
+    "name": "William Avila"
+  },
+  "repository": "https://github.com/wavila88/sdd-kit",
+  "license": "MIT"
+}
