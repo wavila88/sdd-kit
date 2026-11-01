@@ -31,7 +31,7 @@ Build exactly ONE phase of `tasks.md` with TDD, then work with the developer as 
 - Files changed and a short summary of the diff.
 - Self-review against project.md: architecture and dependency rules, conventions, and for frontend changes, consistency with the existing styles. Name anything that deviates.
 - The manual check steps from the phase.
-- Ask: "¿Apruebas la fase o qué cambiamos?" (in the developer's language).
+- Ask: "Do you approve this phase, or what should we change?"
 
 ## Pair-programming loop
 
@@ -40,7 +40,7 @@ The developer replies with feedback ("move the button down", "use the IRepositor
 2. Run the test command again; it must still pass.
 3. Present again as in step 4 and wait.
 
-Repeat until the developer explicitly approves ("ok", "aprobado", "quedó bien"). Only then check box 4, suggest a commit for the phase, and stop.
+Repeat until the developer explicitly approves ("ok", "approved", "looks good"). Only then check box 4, suggest a commit for the phase, and stop.
 
 ## Red flags — stop and follow the steps
 

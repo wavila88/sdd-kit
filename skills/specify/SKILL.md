@@ -17,7 +17,7 @@ Turn the developer's description into a short `spec.md`: what must happen when t
    - **complex**: anything else.
    Tell the developer which size you chose and why, in one line.
 4. **Create the folder** `.sdd/specs/NNN-short-name/`, where `NNN` is the next three-digit number after the highest one present (start at `001`).
-5. **Write `spec.md`** with the template. Write it in the language the developer used.
+5. **Write `spec.md`** with the template. Write it in English.
 6. **Questions.** Ask only what blocks the spec, at most 3, and write the answers into the spec. For anything else, choose a reasonable default and state it.
 7. **Finish** with the path of the spec and suggest `/sdd:create-tasks` as the next step.
 

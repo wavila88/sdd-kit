@@ -1,44 +1,44 @@
 # sdd-kit
 
-Spec-driven development ligero para Claude Code. Documentación mínima y control del desarrollador en cada fase.
+Lightweight spec-driven development for Claude Code. Minimal documentation and developer control at every phase.
 
-- **Poca letra:** una spec corta (happy path y sad paths) y una lista de fases. Nada más.
-- **TDD por fase:** cada fase empieza con un test que falla y termina con el test en verde.
-- **Pair programming:** al terminar cada fase, Claude se detiene. Tú revisas el código y la prueba manual, das feedback ("baja el botón", "usa tal interfaz") y Claude lo aplica hasta que digas que quedó bien.
+- **Few words:** a short spec (happy paths and sad paths) and a list of phases. Nothing else.
+- **TDD per phase:** every phase starts with a failing test and ends with the test green.
+- **Pair programming:** when a phase is done, Claude stops. You review the code and the manual check, give feedback ("move the button down", "use that interface") and Claude applies it until you say it looks good.
 
-## Flujo
+## Flow
 
-| Comando | Cuándo | Resultado |
+| Command | When | Result |
 |---|---|---|
-| `/sdd:scan` | Una vez, al instalar en el repo (o cuando cambie el proyecto) | `.sdd/project.md`: stack, arquitectura, convenciones y comando de tests, cada dato con su archivo de origen |
-| `/sdd:specify <descripción>` | Por cada cambio | `.sdd/specs/NNN-nombre/spec.md` (simple ~15 líneas, complejo ~50) |
-| `/sdd:create-tasks` | Después de la spec | `tasks.md` con fases verticales |
-| `/sdd:implement` | Una vez por fase | Construye **una** fase y espera tu aprobación |
+| `/sdd:scan` | Once, when installing in a repo (or when the project changes) | `.sdd/project.md`: stack, architecture, conventions and test command, each fact with its source file |
+| `/sdd:specify <description>` | For each change | `.sdd/specs/NNN-name/spec.md` (simple ~15 lines, complex ~50) |
+| `/sdd:create-tasks` | After the spec | `tasks.md` with vertical phases |
+| `/sdd:implement` | Once per phase | Builds **one** phase and waits for your approval |
 
-Cada fase en `tasks.md`:
+Each phase in `tasks.md`:
 
 ```markdown
-## Phase 1 — Limpiar tras una búsqueda (covers HP-1)
+## Phase 1 — Clear the field after a search (covers HP-1)
 - [ ] 1.1 Failing test — result: ________
 - [ ] 1.2 Implementation — files: ________
 - [ ] 1.3 Passing test — result: ________
 - [ ] 1.4 Developer approval
 ```
 
-Claude marca 1.1-1.3. La casilla 1.4 solo se marca con tu aprobación explícita. Las casillas son el estado: si cierras el editor, `/sdd:implement` retoma donde quedó.
+Claude checks 1.1-1.3. Box 1.4 is only checked with your explicit approval. The boxes are the state: if you close the editor, `/sdd:implement` resumes where it left off.
 
-## Instalación
+## Installation
 
-Como plugin, en el proyecto donde lo quieras usar:
+As a plugin, in the project where you want to use it:
 
 ```
 /plugin marketplace add wavila88/sdd-kit
 /plugin install sdd@sdd-kit
 ```
 
-Después ejecuta `/sdd:scan` y revisa `.sdd/project.md`.
+Then run `/sdd:scan` and review `.sdd/project.md`.
 
-## Estructura en tu proyecto
+## Structure in your project
 
 ```
 .sdd/
